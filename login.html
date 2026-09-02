@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="Acceso demostrativo de Gas El Volcán." name="description">
+    <title>Ingresar | Gas El Volcán</title>
+    <link href="css/style.css" rel="stylesheet">
+    <script defer src="js/site.js">
+    </script>
+    <script defer src="js/datos/productos.js">
+    </script>
+    <script defer src="js/carrito.js">
+    </script>
+    <script defer src="js/formularios.js">
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">
+      Saltar al contenido
+    </a>
+    <header data-active="login" data-site-header="">
+    </header>
+    <main class="page-main" id="contenido">
+      <header class="container page-heading">
+        <p class="eyebrow">Prototipo frontend</p>
+        <h1>Inicio de sesión</h1>
+        <p>No existe autenticación real en la Evaluación 1. El formulario solo demuestra reglas de validación JavaScript.</p>
+      </header>
+      <section class="section">
+        <div class="container">
+          <form class="form-card" data-form="login" novalidate>
+            <div class="form-grid">
+              <div class="field">
+                <label for="correo">Correo</label>
+                <input aria-describedby="correo-ayuda correo-error" autocomplete="email" id="correo" maxlength="100" name="correo" type="email">
+                <p class="field-help" id="correo-ayuda">Usa @duoc.cl, @profesor.duoc.cl o @gmail.com.</p>
+                <p class="field-error" id="correo-error">
+                </p>
+              </div>
+              <div class="field">
+                <label for="contrasena">Contraseña</label>
+                <input aria-describedby="contrasena-error" autocomplete="current-password" id="contrasena" maxlength="10" minlength="4" name="contrasena" type="password">
+                <p class="field-error" id="contrasena-error">
+                </p>
+              </div>
+            </div>
+            <div class="actions">
+              <button class="button" type="submit">Validar e ingresar a la demo</button>
+              <a class="button button-secondary" href="registro.html">
+                Registrarme
+              </a>
+            </div>
+            <p aria-live="polite" class="form-status" data-form-status="" tabindex="-1">
+            </p>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer data-site-footer="">
+    </footer>
+  </body>
+</html>
