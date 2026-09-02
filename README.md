@@ -10,10 +10,13 @@ Esta primera evaluación utiliza solamente HTML, CSS y JavaScript. No incluye ba
 
 ## Cómo abrir el proyecto
 
-1. Descargar o clonar el repositorio.
-2. Abrir la carpeta en Visual Studio Code.
-3. Abrir `index.html` utilizando la extensión Live Server.
-4. Recorrer el sitio desde el menú principal.
+1. Descargar o descomprimir el proyecto.
+2. Entrar a la carpeta `ProyectoFullStack2`.
+3. Abrir el archivo **`index.html`** con el navegador.
+4. Recorrer todas las secciones desde el menú de la página.
+
+> **ARCHIVO PRINCIPAL: `index.html`**  
+> Este archivo abre la página de inicio. Desde su menú se accede a las demás vistas y funciones del proyecto.
 
 ## Funciones principales
 
