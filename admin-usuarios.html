@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Administrar usuarios | Gas El Volcán</title>
+    <link href="css/style.css" rel="stylesheet">
+    <script defer src="js/site.js">
+    </script>
+    <script defer src="js/datos/productos.js">
+    </script>
+    <script defer src="js/admin.js">
+    </script>
+  </head>
+  <body class="admin-body">
+    <div class="demo-banner">
+      Usuarios demostrativos: no hay cuentas ni permisos reales.
+    </div>
+    <div class="admin-shell">
+      <aside data-active="usuarios" data-admin-sidebar="">
+      </aside>
+      <main class="admin-main" id="contenido">
+        <div class="admin-top">
+          <div>
+            <p class="eyebrow">Mantenedor</p>
+            <h1>Usuarios</h1>
+          </div>
+          <a class="button" href="admin-usuario-nuevo.html">
+            Nuevo usuario
+          </a>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <caption class="sr-only">Listado de usuarios demostrativos</caption>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>RUN</th>
+                <th>Nombre</th>
+                <th>Correo</th>
+                <th>Tipo</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody data-admin-users="">
+            </tbody>
+          </table>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

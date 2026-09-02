@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Administrar productos | Gas El Volcán</title>
+    <link href="css/style.css" rel="stylesheet">
+    <script defer src="js/site.js">
+    </script>
+    <script defer src="js/datos/productos.js">
+    </script>
+    <script defer src="js/admin.js">
+    </script>
+  </head>
+  <body class="admin-body">
+    <div class="demo-banner">
+      Administración demostrativa almacenada localmente.
+    </div>
+    <div class="admin-shell">
+      <aside data-active="productos" data-admin-sidebar="">
+      </aside>
+      <main class="admin-main" id="contenido">
+        <div class="admin-top">
+          <div>
+            <p class="eyebrow">Mantenedor</p>
+            <h1>Productos</h1>
+          </div>
+          <a class="button" href="admin-producto-nuevo.html">
+            Nuevo producto
+          </a>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <caption class="sr-only">Listado de productos administrables</caption>
+            <thead>
+              <tr>
+                <th>Código</th>
+                <th>Nombre</th>
+                <th>Categoría</th>
+                <th>Precio</th>
+                <th>Stock</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody data-admin-products="">
+            </tbody>
+          </table>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

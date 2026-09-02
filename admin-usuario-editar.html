@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Editar usuario | Gas El Volcán</title>
+    <link href="css/style.css" rel="stylesheet">
+    <script defer src="js/site.js">
+    </script>
+    <script defer src="js/datos/productos.js">
+    </script>
+    <script defer src="js/datos/regiones.js">
+    </script>
+    <script defer src="js/formularios.js">
+    </script>
+    <script defer src="js/admin.js">
+    </script>
+  </head>
+  <body class="admin-body">
+    <div class="demo-banner">
+      La contraseña se valida, pero nunca se almacena.
+    </div>
+    <div class="admin-shell">
+      <aside data-active="usuarios" data-admin-sidebar="">
+      </aside>
+      <main class="admin-main" id="contenido">
+        <div class="admin-top">
+          <div>
+            <p class="eyebrow">Mantenedor</p>
+            <h1>Editar usuario</h1>
+          </div>
+          <a class="button button-secondary" href="admin-usuarios.html">
+            Cancelar
+          </a>
+        </div>
+        <form class="form-card" data-admin-user="" data-form="usuario" data-mode="edit" novalidate>
+          <div class="form-grid two">
+            <div class="field">
+              <label for="run">RUN sin puntos ni guion</label>
+              <input aria-describedby="run-error" id="run" maxlength="9" minlength="7" name="run">
+              <p class="field-error" id="run-error">
+              </p>
+            </div>
+            <div class="field">
+              <label for="nombre">Nombre</label>
+              <input aria-describedby="nombre-error" autocomplete="given-name" id="nombre" maxlength="50" name="nombre">
+              <p class="field-error" id="nombre-error">
+              </p>
+            </div>
+            <div class="field">
+              <label for="apellidos">Apellidos</label>
+              <input aria-describedby="apellidos-error" autocomplete="family-name" id="apellidos" maxlength="100" name="apellidos">
+              <p class="field-error" id="apellidos-error">
+              </p>
+            </div>
+            <div class="field">
+              <label for="correo">Correo</label>
+              <input aria-describedby="correo-error" autocomplete="email" id="correo" maxlength="100" name="correo" type="email">
+              <p class="field-error" id="correo-error">
+              </p>
+            </div>
+            <div class="field">
+              <label for="fecha-nacimiento">Fecha de nacimiento (opcional)</label>
+              <input aria-describedby="fecha-nacimiento-error" autocomplete="bday" id="fecha-nacimiento" name="fechaNacimiento" type="date">
+              <p class="field-error" id="fecha-nacimiento-error">
+              </p>
+            </div>
+            <div class="field">
+              <label for="tipo-usuario">Tipo de usuario</label>
+              <select aria-describedby="tipo-usuario-error" id="tipo-usuario" name="tipoUsuario">
+                <option value="">Selecciona un tipo</option>
+                <option>Administrador</option>
+                <option>Cliente</option>
+                <option>Vendedor</option>
+              </select>
+              <p class="field-error" id="tipo-usuario-error">
+              </p>
+            </div>
+            <div class="field">
+              <label for="region">Región</label>
+              <select aria-describedby="region-error" autocomplete="address-level1" id="region" name="region">
+                <option value="">Selecciona una región</option>
+              </select>
+              <p class="field-error" id="region-error">
+              </p>
+            </div>
+            <div class="field">
+              <label for="comuna">Comuna</label>
+              <select aria-describedby="comuna-error" autocomplete="address-level2" disabled id="comuna" name="comuna">
+                <option value="">Selecciona primero una región</option>
+              </select>
+              <p class="field-error" id="comuna-error">
+              </p>
+            </div>
+            <div class="field">
+              <label for="direccion">Dirección</label>
+              <input aria-describedby="direccion-error" autocomplete="street-address" id="direccion" maxlength="300" name="direccion">
+              <p class="field-error" id="direccion-error">
+              </p>
+            </div>
+            <div class="field">
+              <label for="contrasena">Nueva contraseña demostrativa</label>
+              <input aria-describedby="contrasena-error" autocomplete="new-password" id="contrasena" maxlength="10" minlength="4" name="contrasena" type="password">
+              <p class="field-error" id="contrasena-error">
+              </p>
+            </div>
+            <div class="field">
+              <label for="confirmar-contrasena">Confirmar contraseña</label>
+              <input aria-describedby="confirmar-contrasena-error" autocomplete="new-password" id="confirmar-contrasena" maxlength="10" name="confirmarContrasena" type="password">
+              <p class="field-error" id="confirmar-contrasena-error">
+              </p>
+            </div>
+          </div>
+          <button class="button" type="submit">Guardar cambios</button>
+          <p aria-live="polite" class="form-status" data-form-status="" tabindex="-1">
+          </p>
+        </form>
+      </main>
+    </div>
+  </body>
+</html>

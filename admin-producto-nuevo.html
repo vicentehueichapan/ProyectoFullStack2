@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Nuevo producto | Gas El Volcán</title>
+    <link href="css/style.css" rel="stylesheet">
+    <script defer src="js/site.js">
+    </script>
+    <script defer src="js/datos/productos.js">
+    </script>
+    <script defer src="js/formularios.js">
+    </script>
+    <script defer src="js/admin.js">
+    </script>
+  </head>
+  <body class="admin-body">
+    <div class="demo-banner">
+      Administración demostrativa almacenada localmente.
+    </div>
+    <div class="admin-shell">
+      <aside data-active="productos" data-admin-sidebar="">
+      </aside>
+      <main class="admin-main" id="contenido">
+        <div class="admin-top">
+          <div>
+            <p class="eyebrow">Mantenedor</p>
+            <h1>Nuevo producto</h1>
+          </div>
+          <a class="button button-secondary" href="admin-productos.html">
+            Cancelar
+          </a>
+        </div>
+        <form class="form-card" data-form="producto" data-mode="new" novalidate>
+          <div class="form-grid two">
+            <div class="field">
+              <label for="codigo">Código</label>
+              <input aria-describedby="codigo-error" id="codigo" minlength="3" name="codigo">
+              <p class="field-error" id="codigo-error">
+              </p>
+            </div>
+            <div class="field">
+              <label for="nombre">Nombre</label>
+              <input aria-describedby="nombre-error" id="nombre" maxlength="100" name="nombre">
+              <p class="field-error" id="nombre-error">
+              </p>
+            </div>
+            <div class="field">
+              <label for="categoria">Categoría</label>
+              <select aria-describedby="categoria-error" id="categoria" name="categoria">
+                <option value="">Selecciona una categoría</option>
+                <option>Cilindros de Gas</option>
+                <option>Reguladores</option>
+                <option>Mangueras y Conexiones</option>
+                <option>Accesorios</option>
+              </select>
+              <p class="field-error" id="categoria-error">
+              </p>
+            </div>
+            <div class="field">
+              <label for="precio">Precio</label>
+              <input aria-describedby="precio-error" id="precio" inputmode="decimal" min="0" name="precio" step="0.01" type="number">
+              <p class="field-error" id="precio-error">
+              </p>
+            </div>
+            <div class="field">
+              <label for="stock">Stock</label>
+              <input aria-describedby="stock-error" id="stock" inputmode="numeric" min="0" name="stock" step="1" type="number">
+              <p class="field-error" id="stock-error">
+              </p>
+            </div>
+            <div class="field">
+              <label for="stock-critico">Stock crítico (opcional)</label>
+              <input aria-describedby="stock-critico-error" id="stock-critico" inputmode="numeric" min="0" name="stockCritico" step="1" type="number">
+              <p class="field-error" id="stock-critico-error">
+              </p>
+            </div>
+            <div class="field">
+              <label for="imagen">Ruta de imagen (opcional)</label>
+              <input aria-describedby="imagen-error" id="imagen" name="imagen" placeholder="img/productos/accesorio.svg">
+              <p class="field-error" id="imagen-error">
+              </p>
+            </div>
+          </div>
+          <div class="field">
+            <label for="descripcion">Descripción (opcional)</label>
+            <textarea aria-describedby="descripcion-error" id="descripcion" maxlength="500" name="descripcion"></textarea>
+            <p class="field-error" id="descripcion-error">
+            </p>
+          </div>
+          <button class="button" type="submit">Crear producto</button>
+          <p aria-live="polite" class="form-status" data-form-status="" tabindex="-1">
+          </p>
+        </form>
+      </main>
+    </div>
+  </body>
+</html>

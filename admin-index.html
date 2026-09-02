@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="Resumen administrativo demostrativo de Gas El Volcán." name="description">
+    <title>Administración | Gas El Volcán</title>
+    <link href="css/style.css" rel="stylesheet">
+    <script defer src="js/site.js">
+    </script>
+    <script defer src="js/datos/productos.js">
+    </script>
+    <script defer src="js/admin.js">
+    </script>
+  </head>
+  <body class="admin-body">
+    <div class="demo-banner">
+      Prototipo frontend: no existe autenticación ni base de datos en esta evaluación.
+    </div>
+    <div class="admin-shell">
+      <aside data-active="inicio" data-admin-sidebar="">
+      </aside>
+      <main class="admin-main" id="contenido">
+        <div class="admin-top">
+          <div>
+            <p class="eyebrow">Panel demostrativo</p>
+            <h1>Hola, administrador</h1>
+          </div>
+          <a class="button button-secondary" href="index.html">
+            Ver tienda
+          </a>
+        </div>
+        <section aria-labelledby="resumen">
+          <h2 id="resumen">Resumen local</h2>
+          <div class="stats-grid">
+            <article class="stat-card">
+              <span>Productos</span>
+              <strong data-admin-product-count="">0</strong>
+              <a class="text-link" href="admin-productos.html">
+                Gestionar catálogo
+              </a>
+            </article>
+            <article class="stat-card">
+              <span>Usuarios demo</span>
+              <strong data-admin-user-count="">0</strong>
+              <a class="text-link" href="admin-usuarios.html">
+                Gestionar usuarios
+              </a>
+            </article>
+            <article class="stat-card">
+              <span>Stock crítico</span>
+              <strong data-admin-low-count="">0</strong>
+              <a class="text-link" href="admin-productos.html">
+                Revisar alerta
+              </a>
+            </article>
+          </div>
+        </section>
+        <section aria-labelledby="alcance-admin" class="section">
+          <div class="notice notice-warning">
+            <h2 id="alcance-admin">Qué demuestra esta vista</h2>
+            <p>Menú lateral, listados, detalle, creación y edición de productos y usuarios. Los cambios se guardan solo en este navegador para demostrar el flujo solicitado.</p>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
