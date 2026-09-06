@@ -29,7 +29,7 @@ La solución responde al caso de la Distribuidora de Gas El Volcán: muestra los
 - Página principal con productos destacados y zonas de despacho.
 - Catálogo construido desde un arreglo de JavaScript.
 - Detalle de cada producto.
-- Carrito guardado en el almacenamiento local del navegador.
+- Carrito guardado en el almacenamiento local del navegador, con cambio de cantidades, eliminación y vaciado.
 - Registro, inicio de sesión y contacto con validaciones.
 - Sección Nosotros y dos artículos informativos.
 - Administración demostrativa de productos y usuarios.
@@ -50,9 +50,10 @@ Desde `index.html` se accede a Inicio, Productos, Nosotros, Blogs, Contacto, Reg
 
 1. Abrir `index.html`.
 2. Entrar a Productos y abrir el detalle de uno de ellos.
-3. Añadirlo al carrito, cambiar su cantidad y recargar la página para comprobar que se conserva.
+3. Añadirlo al carrito, cambiar su cantidad y recargar la página para comprobar que se conserva. Probar también Eliminar y Vaciar carrito.
 4. Abrir Registro y probar primero campos vacíos y luego datos válidos.
-5. Ingresar con `vicente@gmail.com` y contraseña `1234` para recorrer la administración demostrativa.
+5. Ingresar con `demo@gmail.com` y contraseña `1234` para recorrer la administración demostrativa. Se valida el formato, sin autenticar una cuenta real.
+6. Reproducir el video de seguridad en Inicio y comprobar la navegación desde el menú.
 
 ## Organización
 

@@ -3,7 +3,9 @@
   const valor = (form, nombre) => form.elements[nombre]?.value.trim() || "";
   const correoValido = (correo) => {
     const partes = correo.toLowerCase().split("@");
-    return partes.length === 2 && partes[0].length > 0 && DOMINIOS.includes(partes[1]);
+    return partes.length === 2 &&
+      /^[a-z0-9!#$%&'*+/=?^_\x60{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_\x60{|}~-]+)*$/i.test(partes[0]) &&
+      DOMINIOS.includes(partes[1]);
   };
 
   const runValido = (run) => {
@@ -184,7 +186,10 @@
       if (tipo === "login") setTimeout(() => {
         location.href = "admin-index.html";
       }, 700);
-      else form.reset();
+      else {
+        form.reset();
+        form.actualizarComunas?.();
+      }
     });
   };
 

@@ -1,0 +1,8 @@
+# Entregables y material local; no forman parte del código del sitio.
+/entrega-ep1/
+/preparacion/
+/.revision-local/
+
+# Archivos del sistema operativo.
+Thumbs.db
+.DS_Store

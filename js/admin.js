@@ -38,7 +38,7 @@
     const cuerpo = document.querySelector("[data-admin-products]");
     if (!cuerpo) return;
     cuerpo.innerHTML = productosAdmin().map((p) =>
-      `<tr><td>${p.codigo}</td><td>${GasVolcan.escaparHtml(p.nombre)}</td><td>${GasVolcan.escaparHtml(p.categoria)}</td><td>${GasVolcan.formatearPrecio(p.precioResidencial)}</td><td class="${p.stock <= (p.stockCritico ?? -1) ? "stock-low" : ""}">${p.stock}</td><td><a class="text-link" href="admin-producto-detalle.html?id=${encodeURIComponent(p.codigo)}">Ver</a> · <a class="text-link" href="admin-producto-editar.html?id=${encodeURIComponent(p.codigo)}">Editar</a></td></tr>`
+      `<tr><td>${GasVolcan.escaparHtml(p.codigo)}</td><td>${GasVolcan.escaparHtml(p.nombre)}</td><td>${GasVolcan.escaparHtml(p.categoria)}</td><td>${GasVolcan.formatearPrecio(p.precioResidencial)}</td><td class="${p.stock <= (p.stockCritico ?? -1) ? "stock-low" : ""}">${p.stock}</td><td><a class="text-link" href="admin-producto-detalle.html?id=${encodeURIComponent(p.codigo)}">Ver</a> · <a class="text-link" href="admin-producto-editar.html?id=${encodeURIComponent(p.codigo)}">Editar</a></td></tr>`
       ).join("");
   };
 
@@ -61,7 +61,7 @@
       return;
     }
     contenedor.innerHTML =
-      `<p class="eyebrow">${p.codigo}</p><h1>${GasVolcan.escaparHtml(p.nombre)}</h1><dl class="detail-data"><div><dt>Categoría</dt><dd>${GasVolcan.escaparHtml(p.categoria)}</dd></div><div><dt>Descripción</dt><dd>${GasVolcan.escaparHtml(p.descripcion || "Sin descripción")}</dd></div><div><dt>Precio</dt><dd>${GasVolcan.formatearPrecio(p.precioResidencial)}</dd></div><div><dt>Stock</dt><dd class="${p.stock <= (p.stockCritico ?? -1) ? "stock-low" : ""}">${p.stock}</dd></div><div><dt>Stock crítico</dt><dd>${p.stockCritico ?? "No definido"}</dd></div></dl><a class="button" href="admin-producto-editar.html?id=${encodeURIComponent(p.codigo)}">Editar producto</a>`;
+      `<p class="eyebrow">${GasVolcan.escaparHtml(p.codigo)}</p><h1>${GasVolcan.escaparHtml(p.nombre)}</h1><dl class="detail-data"><div><dt>Categoría</dt><dd>${GasVolcan.escaparHtml(p.categoria)}</dd></div><div><dt>Descripción</dt><dd>${GasVolcan.escaparHtml(p.descripcion || "Sin descripción")}</dd></div><div><dt>Precio</dt><dd>${GasVolcan.formatearPrecio(p.precioResidencial)}</dd></div><div><dt>Stock</dt><dd class="${p.stock <= (p.stockCritico ?? -1) ? "stock-low" : ""}">${p.stock}</dd></div><div><dt>Stock crítico</dt><dd>${p.stockCritico ?? "No definido"}</dd></div></dl><a class="button" href="admin-producto-editar.html?id=${encodeURIComponent(p.codigo)}">Editar producto</a>`;
   };
 
   const renderDetalleUsuario = () => {

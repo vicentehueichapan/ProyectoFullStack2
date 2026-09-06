@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
       </article>`;
     }).join("");
     resumen.innerHTML =
-      `<h2>Resumen</h2><p>${Carrito.cantidadTotal()} unidad(es) en el carrito.</p><div class="cart-total"><span>Total</span><span>${GasVolcan.formatearPrecio(Carrito.total())}</span></div><button class="button" type="button" data-demo-checkout>Confirmar compra demostrativa</button>`;
+      `<h2>Resumen</h2><p>${Carrito.cantidadTotal()} unidad(es) en el carrito.</p><div class="cart-total"><span>Total</span><span>${GasVolcan.formatearPrecio(Carrito.total())}</span></div><div class="actions"><button class="button" type="button" data-demo-checkout>Confirmar compra demostrativa</button><button class="button button-secondary" type="button" data-cart-clear>Vaciar carrito</button></div>`;
   };
 
   lista.addEventListener("change", (evento) => {
@@ -48,6 +48,13 @@ document.addEventListener("DOMContentLoaded", () => {
     renderizar();
   });
   resumen.addEventListener("click", (evento) => {
+    if (evento.target.closest("[data-cart-clear]")) {
+      Carrito.vaciar();
+      estado.textContent = "Carrito vaciado.";
+      estado.className = "form-status success";
+      estado.focus();
+      return;
+    }
     if (!evento.target.closest("[data-demo-checkout]")) return;
     estado.textContent =
       "Demostración completada. Esta versión no procesa pagos ni crea pedidos reales.";
